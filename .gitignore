@@ -6,3 +6,6 @@ outputs/
 eval_exports/
 *.ipynb_checkpoints
 ./.claude
+
+**/outputs/
+**/trainer_output/
