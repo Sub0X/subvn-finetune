@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/sub01/Projects/Personal/shaberi/src/harubench/**)",
+      "Bash(python3)",
+      "Bash(conda info:*)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python -c ':*)",
+      "Bash(python _build_notebook.py)",
+      "WebSearch",
+      "WebFetch(domain:unsloth.ai)",
+      "WebFetch(domain:kaitchup.substack.com)",
+      "Bash(python)"
+    ]
+  }
+}
