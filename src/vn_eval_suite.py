@@ -87,11 +87,12 @@ def compute_reference_metrics(predictions: list[str], references: list[str]) -> 
     try:
         import sacrebleu
     except Exception:
-        return {"chrf2": None, "ter": None}
+        return {"bleu": None, "chrf2": None, "ter": None}
 
+    bleu = sacrebleu.corpus_bleu(predictions, [references])
     chrf = sacrebleu.corpus_chrf(predictions, [references], word_order=2)
     ter = sacrebleu.corpus_ter(predictions, [references])
-    return {"chrf2": float(chrf.score), "ter": float(ter.score)}
+    return {"bleu": float(bleu.score), "chrf2": float(chrf.score), "ter": float(ter.score)}
 
 
 def compute_comet_metrics(
